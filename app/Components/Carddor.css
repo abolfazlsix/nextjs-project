@@ -1,4 +1,9 @@
-.map{
+
+.heds {
+    width: 100%;
+}
+
+.map {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,11 +11,11 @@
     margin: 20px 7.5% 10px 7.5%;
 }
 
-.mapdiv{
+.mapdiv {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#5ba167 ;
+    background-color: #5ba167;
     flex: 1;
     margin: 5px 20px 5px 20px;
     text-align: center;
@@ -18,37 +23,61 @@
     border-radius: 18px;
     font-size: 21px;
     font-weight: bolder;
-    text-align: center;
     color: #fff;
-
 }
-@media (max-width: 700px) {
+
+.mapdiv h1 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.mapdiv h2 {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: normal;
+}
+
+/* فقط ریسپانسیو - بدون تغییر در استایل‌های اصلی */
+@media (max-width: 992px) {
     .map {
-
-        width: 85%;
-        margin: 20px 7.5% 10px 7.5%;
-
+        width: 90%;
+        margin: 20px 5% 10px 5%;
+        gap: 15px;
     }
-
+    
     .mapdiv {
-        display: flex;
-        /* align-items: center; */
-        justify-content: center;
-       
-        background-color: #5ba167;
-        flex: 1;
-        margin: 5px 20px 5px 20px;
-        text-align: center;
-        height: 100px;
-        border-radius: 18px;
-        font-size: 18px;
-        font-weight: bolder;
-     
-        color: #fff;
-
+        margin: 5px 10px 5px 10px;
     }
 }
 
-.heds {
-    width: 100%;
+@media (max-width: 768px) {
+    .map {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 20px 2.5% 10px 2.5%;
+        gap: 10px;
+    }
+    
+    .mapdiv {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 140px;
+        margin: 5px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mapdiv {
+        flex: 1 1 100%;
+        max-width: 280px;
+        margin: 5px auto;
+        height: 120px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mapdiv {
+        height: 100px;
+    }
 }

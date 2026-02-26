@@ -17,6 +17,7 @@ p{
 }
 
 button{
+    user-select: none;
     background-color: #fff;
     color: #5ba167;
     border: 2px solid #5ba167;

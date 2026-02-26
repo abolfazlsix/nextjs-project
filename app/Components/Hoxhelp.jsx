@@ -4,18 +4,19 @@ import "./Hoxhelp.css";
 export default function Hoxhelp() {
   return (
     <section className="hoxhelp mh" dir="rtl" aria-label="ما چه کمکی می‌توانیم به شما بکنیم">
-  <div className="divhed">
-    <div className="d1">
-       <div className="d2"><p>محبوب ترین دوره ها</p></div>
+       <div className="divhed">
+ <div className="d1">
+       <div className="d2"><p>آخرین دوره های ما</p></div>
     <div className="d3">
-    
-    <div className="d32">پرمخاطب ترین دوره های رایگان سبزلرن</div>
+   
+    <div className="d32">سکوی پرتاپ شما به سمت موفقیت</div>
 
     </div>
     </div>
   
    </div>
-     
+
+         
 
       <div className="help">
         <div className="helpRow">

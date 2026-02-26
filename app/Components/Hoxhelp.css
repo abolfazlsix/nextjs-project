@@ -1,5 +1,4 @@
-/* Hoxhelp.css */
-:root{
+:root {
   --container-width: 85%;
   --accent: #5ba167;
   --card-bg: #ffffff;
@@ -10,110 +9,246 @@
   --max-content-width: 1200px;
 }
 
-/* پایه */
-* { box-sizing: border-box; }
+/* Reset and Base */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .mh { margin: 0; }
 .hoxhelp {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 }
 
-/* هدر عنوان */
-.hoxhelpHeader {
+/* Header Styling */
+.divhed {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.header-container {
   width: var(--container-width);
   max-width: var(--max-content-width);
-  margin: 18px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
-.hoxTitle {
-  font-size: 22px;
-  font-weight: 900;
-  color: var(--accent);
+.title-wrapper {
   margin-bottom: 8px;
 }
 
-.hoxSubtitle {
-  font-size: 15px;
-  color: #fff;
-  opacity: 0.9;
-  font-weight: 700;
-}
-
-/* کانتینر کارت‌ها */
-.help {
-  width: var(--container-width);
-  max-width: var(--max-content-width);
-  margin: 6px auto 28px auto;
-}
-
-/* هر ردیف شامل 2 کارت در دسکتاپ */
-.helpRow {
-  display: flex;
-  gap: 18px;
+.section-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--accent);
   margin: 0;
 }
 
-/* کارت کلی */
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Cards Container */
+.help {
+  width: var(--container-width);
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
+/* Row Layout - Desktop (4 columns in 2 rows) */
+.helpRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
 .helpCard {
-  flex: 1 1 0;
+  flex: 1;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
-  padding: 20px;
+  padding: 25px;
   border-radius: var(--radius);
   color: #000;
   direction: rtl;
-  min-height: 120px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* عنوان و متن داخل کارت */
+.helpCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Card Content */
 .helpCardTitle {
-  margin: 0 0 8px 0;
-  font-size: 18px;
+  margin: 0 0 12px 0;
+  font-size: 20px;
   font-weight: 900;
   color: var(--accent);
+  line-height: 1.3;
 }
 
 .helpCardText {
   margin: 0;
   color: var(--text-muted);
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+  flex-grow: 1;
 }
 
-/* فاصله بین ردیف‌ها */
-.helpRow + .helpRow { margin-top: 6px; }
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
 
-/* موبایل: زیر 700px */
+/* Tablet: 701px تا 1024px */
+@media (max-width: 1024px) {
+  :root {
+    --container-width: 90%;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .section-subtitle {
+    font-size: 15px;
+  }
+  
+  .helpRow {
+    gap: 15px;
+  }
+  
+  .helpCard {
+    padding: 20px;
+  }
+  
+  .helpCardTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .helpCardText {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* موبایل و تبلت کوچک: زیر 700px */
 @media (max-width: 700px) {
-  :root { --container-width: 92%; }
-  .hoxhelpHeader { margin: 12px auto; }
-  .hoxTitle { font-size: 20px; }
-  .hoxSubtitle { font-size: 14px; color: rgba(255,255,255,0.9); }
-
-  /* در موبایل کارت‌ها یک ستونه می‌شن */
+  :root {
+    --container-width: 92%;
+  }
+  
+  .hoxhelp {
+    padding: 15px 0;
+  }
+  
+  .header-container {
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  
+  .section-subtitle {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* در موبایل کارت‌ها به صورت عمودی و تک ستونه */
   .helpRow {
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 12px;
   }
-
+  
   .helpCard {
-    padding: 16px;
+    padding: 18px;
     min-height: unset;
   }
-
-  .helpCardTitle { font-size: 17px; }
-  .helpCardText { font-size: 14px; }
+  
+  .helpCardTitle {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  
+  .helpCardText {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
-/* دسترسی بهتر: انتخاب متن غیرقابل انتخاب در جاهای دیگه */
-body { user-select: none; }
+/* موبایل خیلی کوچک: زیر 480px */
+@media (max-width: 480px) {
+  :root {
+    --container-width: 95%;
+  }
+  
+  .hoxhelp {
+    padding: 10px 0;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .section-subtitle {
+    font-size: 13px;
+  }
+  
+  .helpCard {
+    padding: 16px;
+  }
+  
+  .helpCardTitle {
+    font-size: 16px;
+  }
+  
+  .helpCardText {
+    font-size: 13px;
+  }
+}
 
-/* اگر نیاز به تغییر سریع رنگ / تم داشتی این سه متغیر رو عوض کن:
-   --accent, --card-bg, --card-shadow */
+/* لپتاپ و دسکتاپ کوچک: 1025px تا 1366px */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .help {
+    max-width: 1100px;
+  }
+  
+  .helpCard {
+    padding: 22px;
+  }
+}
+
+/* Accessibility: اجازه انتخاب متن */
+.helpCard {
+  user-select: text;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+  .helpCard {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+  
+  .helpRow {
+    break-inside: avoid;
+  }
+}

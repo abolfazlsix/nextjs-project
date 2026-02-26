@@ -4,21 +4,62 @@ import "./Carddor.css";
 import "./Doretaraf.css";
 
 export default function Doretaraf() {
-  const [list] = useState([
-    /* ...همون آرایه دوره‌ها (تمام آیتم‌ها) ... */
-    {
-      name: "آموزش جامع و پروژه محور n8n",
-      img: "https://sabzlearn.ir/wp-content/uploads/2025/11/n8n-768x432.webp",
-      secription:
-        "در این دوره یاد می‌گیرید بدون کدنویسی، کارهای تکراری را خودکار کنید و بین سرویس‌ها اتوماسیون‌های حرفه‌ای بسازید...",
-      stad: "مهرشاد براتی",
-      pric: "4,000,000",
-      pric1: "3,200,000 تومان",
-      esli: "20%",
-      viwe: "81",
-    },
-    // بقیه آیتم‌ها رو اضافه کن...
-  ]);
+   const [list] = useState([
+      /* ...همون آرایه دوره‌ها مثلِ شما... */
+   {name:"آموزش جامع زبان سی شارپ",img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/11/c-sharp.webp",
+     secription:"در این دوره جامع C#، برنامه‌نویسی را از پایه تا سطح حرفه‌ای یاد می‌گیرید و با مفاهیم مهمی مثل",
+     stad:"مهرشاد براتی",
+     pric:"4,000,000",
+     pric1:"3,200,000 تومان",
+     esli:"20%",
+     viwe:"81"
+  },
+      {name:"آموزش جامع فریمورک Alpine.js",img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/11/AlpineJS8-1.webp",
+     secription:"دوره آموزش پروژه‌محور Alpine.js سبزلرن، روشی سریع و ساده برای یادگیری تعاملی‌سازی صفحات وب.",
+     stad:"مهرشاد براتی",
+     pric:"5,000,000",
+     pric1:"4,000,000  تومان",
+     esli:"20%",
+     viwe:"81"
+  },
+      {name:"آموزش جامع NuxtJs",img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/11/NuxtJs3.webp",
+     secription:"ر دوره آموزش جامع Nuxt.js به صورت پروژه‌محور، از صفر تا سطح حرفه‌ای SSR، سئو، مدیریت داده، API و",
+     stad:"مهرشاد براتی",
+     pric:"6,000,000",
+     pric1:"4,800,000 تومان",
+     esli:"20%",
+     viwe:"81"
+  },
+      {name:"آموزش جامع PHP از صفر + پروژه محور",
+    img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/07/4-2.webp",
+     secription:"دوره آموزش PHP یک برنامه جامع و کاربردیست و برای افرادی طراحی شده که میخواهند مهارت‌های خود",
+     stad:"مهرشاد براتی",
+     pric:"1,000,000",
+     pric1:"رایگان",
+     esli:"100%",
+     viwe:"81"
+  },
+      {name:"پیاده سازی داشبورد های حرفه ای با CSS و JS",img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/07/19-1.webp",
+     secription:"این دوره فرصتی فوق‌العاده برای ارتقاء مهارت‌های فرانت اند شماست. با یادگیری از جدیدترین تکنیک‌ها،",
+     stad:"مهرشاد براتی",
+    //  pric:"",
+     pric1:"2,000,000",
+    //  esli:"100%",
+     viwe:"81"
+  },
+      {name:"آموزش جامع فریمورک Flutter",img:"https://teh-1.s3.poshtiban.com/wordpress-uploads/2025/07/6.webp",
+     secription:"دوره آموزش جامع فلاتر سبزلرن، یادگیری Flutter از صفر تا ساخت اپلیکیشن‌های واقعی. آموزش",
+     stad:"مهرشاد براتی",
+     pric:"",
+     pric1:"1,200,000 تومان",
+    //  esli:"20%",
+     viwe:"81"
+  },
+  
+  
+     
+      // ... بقیه آیتم‌ها رو دقیقاً همونطور که داری اضافه کن ...
+    ]);
 
   const viewportRef = useRef(null);
   const cardRef = useRef(null);
